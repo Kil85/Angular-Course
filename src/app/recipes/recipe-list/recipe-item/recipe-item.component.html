@@ -1,1 +1,8 @@
-<p>recipe-item works!</p>
+<a href="#" (click)="onRecipeClicked()" class="list-group-item list-group-item-action clearfix mb-2 bg-secondary">
+    <div class="d-flex align-items-center">
+        <div class="flex-grow-1">
+            <h4 class="mb-1">{{recipe.name}}</h4>
+            <p class="mb-0">{{recipe.description}}</p>
+        </div>
+        <img src="{{recipe.imagePath}}" alt="" class="img-fluid" style="max-height: 50px;">
+    </div>

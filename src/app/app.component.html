@@ -5,13 +5,14 @@
     </div>
 </div> -->
 <div class="mainClass">
-    <app-header></app-header>
+    <app-header (dataToParent)="handleSelection($event)"></app-header>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <app-recipes></app-recipes>
-                <app-shopping-list></app-shopping-list>
+                <app-recipes *ngIf="selected ==='recipes'"></app-recipes>
+                <app-shopping-list *ngIf=" selected==='shoppingList'"></app-shopping-list>
             </div>
+
         </div>
     </div>
 </div>
